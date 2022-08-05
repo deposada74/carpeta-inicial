@@ -11,11 +11,45 @@
 
     <title>Tittle here</title>
   </head>
-  <body>
+  <body class="bg-dark">
+    <nav class="navbar navbar-dark bg-info">
+      <a href="" class="navbar-brand">Productos</a>
+    </nav>
+    <div class="container">
+      <div class="row mt-5"> <!--//mt-1 to mt-5 is for marging-top but simplified-->
+        
+        <div class="col-4"> <!--Bootstrap have twelve colounms-->
+          <div class="card">
+            <div class="card-header"><h4>Agregar productos</h4></div>
+            <form class="card-body" id="form-product" name="form-product">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Descripcion" name="description" id="description">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Cantidad de productos" name="amount" id="amount" onkeyup="this.value=numbers(this.value)">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Precio" name="price" id="price"> 
+              </div>
+              <button type="button" class="btn btn-primary btn-block" value="Enviado">Enviar</button>
+            </form>
+          </div>
+        </div>
+
+<!-- products list -->
+        <div class="col-8" id="products">
+          
+        </div>
+      </div>
+    </div>
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script type="text/javascript" src="js/jquery-3.5.1.slim.min.js"></script>
     <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- function -->
+    <script src="js/function.js"></script>
   </body>
 </html>
